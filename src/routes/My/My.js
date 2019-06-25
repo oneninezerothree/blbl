@@ -15,6 +15,9 @@ export default class My extends Component{
       pathname:'/login'
     })
   }
+  // componentDidMount(){
+  //   console.log(this)
+  // }
   render() {
     return (
       <div className={styles.my}>

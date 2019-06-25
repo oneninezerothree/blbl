@@ -1,0 +1,20 @@
+.details{
+  height: 100%;
+  .video{
+    //height: 2.1rem  /* 210/100 */;
+    width: 100%;
+  }
+  .title{
+    padding: 0.15rem  /* 15/100 */;
+    p{
+      font-size: 0.12rem;
+    }
+  }
+  .recommend {
+    .tj {
+      font-weight: bold;
+      padding: 0.15rem  /* 15/100 */;
+      color: #1890FF;
+    }
+  }
+}
