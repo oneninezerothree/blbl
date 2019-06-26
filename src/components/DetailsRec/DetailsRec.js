@@ -21,7 +21,7 @@ class DetailsRec extends Component {
   async getRec() {
     let data = await axios({
       method: 'post',
-      url: 'http://localhost:3000/getRecommend/init',
+      url: 'http://106.14.81.245:3100/getRecommend/init',
       data: {
         id: this.state.id
       }

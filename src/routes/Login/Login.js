@@ -32,7 +32,7 @@ export default class Register extends Component {
       })
       let data = await axios({
         method: 'post',
-        url: 'http://localhost:3000/loginRegister/login',
+        url: 'http://106.14.81.245:3100/loginRegister/login',
         data: {
           tel: this.state.tel,
           password: this.state.password

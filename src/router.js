@@ -1,6 +1,6 @@
 import React from 'react';
 import { Router, Route, Switch, Redirect } from 'dva/router';
-import IndexPage from './routes/IndexPage';
+// import IndexPage from './routes/IndexPage';
 import Login from './routes/Login/Login'
 import Register from './routes/Register/Register'
 import My from './routes/My/My'
@@ -15,7 +15,8 @@ function RouterConfig({ history }) {
   return (
     <Router history={history}>
       <Switch>
-        <Route path="/" exact component={IndexPage} />
+        <Redirect exact from='/' to='/home' />
+        {/*<Route path="/" exact component={IndexPage} />*/}
         <Route path="/login" component={Login} />
         <Route path="/register" component={Register} />
         <Route path="/my" component={My} />
