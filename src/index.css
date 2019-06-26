@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-size: 0.16rem;
 }
 html, body, :global(#root) {
   height: 100%;
@@ -28,3 +29,36 @@ fieldset, img,input,button {
   *zoom:1;/*IE/7/6*/
 }
 
+/*适配iphone4*/
+@media (min-width: 320px) and (max-width: 480px) {
+  html{
+    font-size: 100px;
+  }
+}
+
+@media (min-width: 360px) and (max-width: 640px) {
+  html{
+    font-size: 110px;
+  }
+}
+
+/*适配iphone5*/
+@media (min-width: 375px) and (max-width: 667px) {
+  html{
+    font-size: 115px;
+  }
+}
+
+/*适配iphone6 Plus*/
+@media (min-width: 414px) and (max-width: 736px) {
+  html{
+    font-size: 120px;
+  }
+}
+
+/*ipad*/
+@media (min-width: 768px) and (max-width: 1024px) {
+  html{
+    font-size: 190px;
+  }
+}

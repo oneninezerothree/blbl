@@ -1,0 +1,14 @@
+.details {
+  height: 100%; }
+  .details .video {
+    width: 100%; }
+  .details .title {
+    padding: 0.15rem; }
+    .details .title p {
+      font-size: 0.12rem; }
+  .details .recommend .tj {
+    font-weight: bold;
+    padding: 0.15rem;
+    color: #1890FF; }
+
+/*# sourceMappingURL=Details.css.map */

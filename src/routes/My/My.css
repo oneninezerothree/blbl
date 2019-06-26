@@ -1,0 +1,40 @@
+.my {
+  height: 100%;
+  background: #F4F4F4; }
+  .my .banner {
+    position: relative;
+    width: 100%;
+    height: 1.3rem; }
+    .my .banner img {
+      width: 100%;
+      height: 100%; }
+  .my .msg {
+    height: 1.6rem;
+    background: #fff;
+    position: relative; }
+    .my .msg .head {
+      width: 0.8rem;
+      height: 0.8rem;
+      border-radius: 50%;
+      position: absolute;
+      top: -0.4rem;
+      left: 0.2rem;
+      background: #000; }
+    .my .msg p {
+      font-size: .14rem;
+      line-height: 0.28rem;
+      color: #fb7299;
+      text-align: center;
+      float: right;
+      border: 0.01rem solid #fb7299;
+      border-radius: 0.05rem;
+      padding: 0 0.08rem;
+      margin-top: 0.1rem;
+      margin-right: 0.1rem; }
+  .my .username {
+    clear: right;
+    margin-left: 0.2rem;
+    font-weight: bold;
+    font-size: 0.18rem; }
+
+/*# sourceMappingURL=My.css.map */

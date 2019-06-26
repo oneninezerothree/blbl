@@ -1,0 +1,13 @@
+.register {
+  height: 100%;
+  background: #F4F4F4; }
+  .register header {
+    height: 0.43rem;
+    text-align: center;
+    line-height: 0.43rem;
+    width: 100%;
+    background: #fff; }
+  .register .inp {
+    margin-top: 0.4rem; }
+
+/*# sourceMappingURL=Register.css.map */

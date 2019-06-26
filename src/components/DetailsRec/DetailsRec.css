@@ -1,0 +1,32 @@
+.DetailsRec {
+  display: flex;
+  padding: 0.15rem;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+  .DetailsRec li {
+    list-style: none;
+    width: 48%;
+    height: 1.5rem; }
+    .DetailsRec li .img {
+      width: 100%;
+      height: 1rem;
+      border-radius: .08rem; }
+      .DetailsRec li .img img {
+        width: 100%;
+        height: 100%;
+        border-radius: .08rem; }
+    .DetailsRec li .title p {
+      margin: 0;
+      font-size: .12rem;
+      height: 0.35rem;
+      overflow: hidden;
+      position: relative; }
+    .DetailsRec li .title ::before {
+      content: '...';
+      position: absolute;
+      width: .16rem;
+      bottom: 0;
+      right: 0;
+      background: transparent; }
+
+/*# sourceMappingURL=DetailsRec.css.map */
