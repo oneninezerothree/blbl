@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import styles from './My.css'
-
+import Header from '../../components/Header/Header'
 export default class My extends Component{
   constructor(props) {
     super(props);
@@ -21,6 +21,7 @@ export default class My extends Component{
   render() {
     return (
       <div className={styles.my}>
+        <Header/>
         <div className={styles.banner}>
           <img src="//s1.hdslb.com/bfs/static/mult/images/bannerTop.png" alt=""/>
         </div>

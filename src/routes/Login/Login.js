@@ -2,7 +2,6 @@ import React, {Component} from 'react'
 import styles from './Login.css'
 import {Input,  Button, message} from 'antd';
 import axios from 'axios'
-
 export default class Register extends Component {
   constructor(props) {
     super(props);

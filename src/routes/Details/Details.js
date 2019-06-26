@@ -8,7 +8,7 @@ class Details extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      // playUrl: this.props.listStore.content.data.playUrl
+      playUrl: this.props.listStore.content.data.playUrl
     }
   }
 
@@ -21,9 +21,10 @@ class Details extends Component {
     //     playUrl: item.playUrl
     //   }
     // })
-    // await this.setState({
-    //   playUrl:item.playUrl
-    // })
+    await this.setState({
+      playUrl:item.url
+    })
+    // console.log(item)
     this.refs.video.play()
     this.refs.video.currentTime = nowTime
   }
@@ -40,7 +41,7 @@ class Details extends Component {
   // }
 
   componentDidUpdate() {
-    console.log(this)
+    // console.log(this)
   }
 
   initTime(time) {
@@ -72,7 +73,8 @@ class Details extends Component {
     return (
       <div className={styles.details}>
         <video className={styles.video}
-               src={content.data.playUrl}
+               // src={content.data.playUrl}
+               src={this.state.playUrl}
                poster={content.data.cover.feed}
                controls={true}
                ref='video'>

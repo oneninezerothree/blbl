@@ -6,8 +6,9 @@
     text-align: center;
     line-height: 0.43rem;
     width: 100%;
-    background: #fff; }
+    background: #fff;
+    position: static; }
   .register .inp {
-    margin-top: 0.4rem; }
+    margin-top: 0.2rem; }
 
 /*# sourceMappingURL=Register.css.map */

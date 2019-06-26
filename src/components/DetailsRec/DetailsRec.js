@@ -59,6 +59,7 @@ class DetailsRec extends Component {
     return (
       <ul className={styles.DetailsRec}>
         {
+          // console.log(this.state.recommend)
           this.state.recommend.map((item, index) => {
             return <li key={index} onClick={this.goDetails.bind(this, item)}>
               <div className={styles.img}>
