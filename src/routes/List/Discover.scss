@@ -1,0 +1,51 @@
+:global{
+    ul,li{
+        list-style: none;
+    }
+    @mixin clearfix {
+        &:after{
+          content: "";
+          display: block;
+          height: 0;
+          clear: both;
+          overflow: hidden;
+          line-height: 0;
+        }
+    }
+    #discr{
+       color: aquamarine;
+        @include clearfix();
+       ul{
+           @include clearfix();
+           li{
+               width: 45%;
+               float: left;
+                margin: 3.2% 0% 0% 3.2%;
+                height: 38vw;
+               .hostop{
+                   a{
+                       display: block;
+                       img{
+                           border-radius: 2vw;
+                           width: 100%;
+                       }
+                   }
+               }
+               .hosbot{
+                   font-size: 4vw;
+                   p{
+                       margin-top: 1.5vw;
+                        color: black;
+                       overflow: hidden;
+                       text-overflow: ellipsis;
+                       display: -webkit-box;
+                       -webkit-line-clamp:2;
+                       /*! autoprefixer: off */
+                       -webkit-box-orient: vertical;
+                       /* autoprefixer: on */
+                   }
+               }
+           }
+       }
+    }
+}
