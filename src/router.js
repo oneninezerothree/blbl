@@ -13,6 +13,7 @@ import Exercise from './routes/List/Exercise';
 import Music from './routes/List/Music';
 import Pets from './routes/List/Pets';
 import CnTech from './routes/List/CnTech';
+import Search from './routes/seek/Search';
 function RouterConfig({ history }) {
   return (
     <Router history={history}>
@@ -30,6 +31,7 @@ function RouterConfig({ history }) {
         <Route path="/Music" exact component={Music} />
         <Route path="/Pets" exact component={Pets} />
         <Route path="/CnTech" exact component={CnTech} />
+        <Route path="/Search" exact component={Search} />
       </Switch>
     </Router>
   );

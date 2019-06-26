@@ -1,0 +1,38 @@
+:global .ssuo {
+  margin: 5vw;
+  margin-right: 19vw !important;
+  position: relative;
+}
+
+:global .ssuo .calloff {
+  color: #fb7299;
+  position: absolute;
+  right: -16%;
+  top: 13%;
+  font-size: 17px;
+}
+
+:global .lis h3 {
+  color: #999;
+  margin-left: 4vw;
+  font-size: 4vw;
+}
+
+:global .lis ul {
+  overflow: hidden;
+}
+
+:global .lis ul li {
+  border: .4vw solid #ccc;
+  float: left;
+  padding: 2vw;
+  margin: 3vw;
+  border-radius: 4vw;
+  font-size: 3vw;
+}
+
+:global .lis dl {
+  border-top: 3vw solid #f4f4f4;
+      padding-left: 4vw;
+      padding-top: 2vw;
+}

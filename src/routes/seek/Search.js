@@ -1,10 +1,9 @@
 import React from 'react';
 import { connect } from 'dva';
-import Discover from './List/Discover';
-import Grabble from './seek/Grabble';
-import Graconn from './seek/Graconn';
+import Grabble from './Grabble';
+import Graconn from './Graconn';
 
-function IndexPage() {
+function Search() {
   return (
     <div className={"page"}>
         {/* <Discover></Discover> */}
@@ -14,7 +13,4 @@ function IndexPage() {
   );
 }
 
-IndexPage.propTypes = {
-};
-
-export default connect()(IndexPage);
+export default connect()(Search);
