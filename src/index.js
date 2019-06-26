@@ -1,8 +1,13 @@
 import dva from 'dva';
 import './index.css';
 import 'antd/dist/antd.css'
+import 'weui'
+
 // 1. Initialize
-const app = dva();
+const app = dva(
+    
+
+);
 
 // 2. Plugins
 // app.use({});
