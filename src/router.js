@@ -12,6 +12,7 @@ import Animation from './routes/Animation/Animation';
 import Plot from './routes/Plot/Plot';
 import Idea from './routes/Idea/Idea';
 import Music from './routes/Music/Music';
+import Search from './routes/seek/Search';
 
 import RouteGuard from './routes/RouteGuard'
 
@@ -88,8 +89,14 @@ function RouterConfig({history, app}) {
       auth: false,
       // component:()=>import('./routes/Music/Music')
       component: Music
+     }, {
+      path: '/Search',
+      name: 'Search',
+      auth: false,
+      // component:()=>import('./routes/Music/Music')
+      component: Search
     },
-  ]
+    ]
   return (
     <Router history={history}>
       <Switch>

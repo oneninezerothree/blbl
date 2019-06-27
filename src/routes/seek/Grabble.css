@@ -1,0 +1,40 @@
+.page .ssuo {
+  margin: 5vw;
+  margin-right: 19vw !important;
+  position: relative;
+}
+
+.page .ssuo .calloff {
+  color: #fb7299;
+  position: absolute;
+  right: -16%;
+  top: 13%;
+  font-size: 17px;
+}
+
+.page .lis h3 {
+  color: #999;
+  margin-left: 4vw;
+  font-size: 4vw;
+}
+
+.page .lis ul {
+  overflow: hidden;
+}
+
+.page .lis ul li {
+  border: .4vw solid #ccc;
+  float: left;
+  padding: 2vw;
+  margin: 3vw;
+  border-radius: 4vw;
+  font-size: 3vw;
+  list-style: none;
+}
+
+.page .lis dl {
+  border-top: 3vw solid #f4f4f4;
+  padding-left: 4vw;
+  padding-top: 2vw;
+}
+/*# sourceMappingURL=Details.css.map */

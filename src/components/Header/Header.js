@@ -1,6 +1,7 @@
 import React from 'react'
 import './Header.css'
 import {withRouter} from "dva/router";
+// import Search from '../../routes/seek/Search';
 
 //你的第一个组件 
 class Header extends React.Component {
@@ -14,6 +15,11 @@ class Header extends React.Component {
       pathname:'home'
     })
   }
+  goSearch() {
+    this.props.history.push({
+      pathname: 'Search'
+    })
+  }
   render() {
     return ( 
       <header>
@@ -24,7 +30,7 @@ class Header extends React.Component {
               }} src="http://www.ctsbw.com/uploadfile/2015/1227/20151227100031265.png"></img>
           </span>
           <form action="#">
-            <input type="search" className="search" placeholder="雨女无瓜" />
+            <input type="search" className="search" placeholder="雨女无瓜" onClick={this.goSearch.bind(this)} />
         </form>
         <span onClick={this.goMy.bind(this)}><img style={{
                   width: '30px',
