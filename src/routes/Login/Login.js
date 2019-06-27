@@ -45,6 +45,9 @@ export default class Register extends Component {
         message.info(data.data.msg)
         sessionStorage.setItem("username", this.state.tel)
         sessionStorage.setItem("name", data.data.username)
+        this.props.history.push({
+          pathname: 'my'
+        })
       } else{
         message.info(data.data.msg)
         // this.props.history.push({

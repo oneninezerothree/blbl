@@ -4,6 +4,7 @@ import Header from '../../components/Header/Header'
 export default class My extends Component{
   constructor(props) {
     super(props);
+    console.log(`my`)
     this.state={
       name:sessionStorage.getItem("name")
     }

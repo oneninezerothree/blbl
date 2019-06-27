@@ -50,7 +50,7 @@ class DetailsRec extends Component {
       id: this.props.listStore.content.data.id
     })
     // console.log(JSON.stringify(this.props.listStore.content))
-    window.scrollTop=0
+    window.scrollTo(0, 0)
     this.getRec()
 
   }
@@ -74,12 +74,12 @@ class DetailsRec extends Component {
             </li>
           })
         }
-
       </ul>
     );
   }
 }
 
 export default connect(store => {
+
   return store
 })(withRouter(DetailsRec))

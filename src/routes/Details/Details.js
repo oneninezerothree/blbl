@@ -22,7 +22,7 @@ class Details extends Component {
     //   }
     // })
     await this.setState({
-      playUrl:item.url
+      playUrl: item.url
     })
     // console.log(item)
     this.refs.video.play()
@@ -56,9 +56,17 @@ class Details extends Component {
 
   }
 
+  componentWillReceiveProps(props) {
+    // console.log(props)
+    this.setState({
+      playUrl: props.listStore.content.data.playUrl
+    })
+  }
+
   render() {
     let content = this.props.listStore.content
     let playInfo = content.data.playInfo
+    console.log(this.state.playUrl)
     const menu = (
       <Menu>
         {
@@ -70,10 +78,11 @@ class Details extends Component {
         }
       </Menu>
     );
+
     return (
       <div className={styles.details}>
         <video className={styles.video}
-               // src={content.data.playUrl}
+          // src={content.data.playUrl}
                src={this.state.playUrl}
                poster={content.data.cover.feed}
                controls={true}
