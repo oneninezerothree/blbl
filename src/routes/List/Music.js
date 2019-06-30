@@ -22,6 +22,19 @@ export default connect((state)=>{
             },
         })
     }
+  async goDetails(item) {
+    await this.props.dispatch({
+      type: 'listStore/save',
+      payload: {
+        content: item.data.content,
+        // playUrl: item.data.playUrl
+      }
+    })
+    this.props.history.push({
+      pathname: 'details'
+    })
+    // console.log(this.props.listStore.content)
+  }
     componentDidMount(){
         // console.log(this)
         Axios.get("https://api.apiopen.top/videoCategoryDetails?id=20")

@@ -16,7 +16,7 @@
     "react-pullload": "^1.2.0",
     "react-router-dom": "^5.0.1",
     "reactjs-swiper": "^0.1.0",
-    "weui": "^2.0.0"
+    "weui": "^2.0.0",
     "sass-loader": "^7.1.0"
   },
   "devDependencies": {

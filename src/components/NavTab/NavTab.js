@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './NavTab.css'
-import {HashRouter as Router, NavLink} from 'react-router-dom'
+import {HashRouter as Router, NavLink,withRouter} from 'dva/router'
 import axios from 'axios'
 
 //导航组件 
@@ -20,37 +20,37 @@ class NavTab extends React.Component {
       url: '/plot'
     }, {
       name: '创意',
-      url: '/cy'
+      url: '/Pets'
     }, {
       name: '音乐',
       url: '/music'
     }, {
       name: '运动',
-      url: '/yd'
+      url: '/Cold'
     }, {
       name: '科技',
-      url: '/kj'
+      url: '/Discover'
     }, {
       name: '时尚',
-      url: '/ss'
+      url: '/Exercise'
     }, {
       name: '游戏',
-      url: '/yx'
+      url: '/Exist'
     }, {
       name: '娱乐',
-      url: '/yl'
+      url: '/Originality'
     }, {
       name: '影视',
-      url: '/ys'
+      url: '/Pets'
     }, {
       name: '综艺',
-      url: '/zy'
+      url: '/CnTech'
     }, {
       name: '记录',
       url: '/daily'
     }, {
       name: '生活',
-      url: '/sh'
+      url: '/Appetizing'
     }, {
       name: '广告',
       url: '/gg'
@@ -94,7 +94,13 @@ class NavTab extends React.Component {
           <ul className='uls'>
             {
               this.state.titles.map((item, index) => {
-                return <li key={index} className='lis' style={{fontSize: '0.14rem'}}>{item.name}</li>
+                return <li key={index} className='lis' style={{fontSize: '0.14rem'}} onClick={() => {
+                  this.props.history.push({
+                    pathname: item.url
+                  })
+                  // console.log(this)
+                }
+                }>{item.name}</li>
               })
             }
           </ul>
@@ -153,4 +159,4 @@ class NavTab extends React.Component {
   }
 }
 
-export default NavTab
+export default withRouter(NavTab)

@@ -12,7 +12,7 @@ import Animation from './routes/Animation/Animation';
 import Plot from './routes/Plot/Plot';
 import Idea from './routes/Idea/Idea';
 import Music from './routes/Music/Music';
-import Search from './routes/seek/Search';
+// import Search from './routes/seek/Search';
 import Discover from './routes/List/Discover';
 import Exist from './routes/List/Exist';
 import Cartoon from './routes/List/Cartoon ';
@@ -20,7 +20,7 @@ import Cold from './routes/List/Cold';
 import Appetizing from './routes/List/Appetizing';
 import Originality from './routes/List/Originality';
 import Exercise from './routes/List/Exercise';
-import Music from './routes/List/Music';
+// import Music from './routes/List/Music';
 import Pets from './routes/List/Pets';
 import CnTech from './routes/List/CnTech';
 import Search from './routes/seek/Search';
@@ -99,7 +99,7 @@ function RouterConfig({history, app}) {
       auth: false,
       // component:()=>import('./routes/Music/Music')
       component: Music
-     }, {
+    }, {
       path: '/Search',
       name: 'Search',
       auth: false,
@@ -169,7 +169,7 @@ function RouterConfig({history, app}) {
       // component:()=>import('./routes/Music/Music')
       component: CnTech
     },
-    ]
+  ]
   return (
     <Router history={history}>
       <Switch>
@@ -178,27 +178,28 @@ function RouterConfig({history, app}) {
         <RouteGuard config={routes}/>
 
         {/*{*/}
-          {/*// routes.map(({path,name,component})=>{*/}
-          {/*//   return(*/}
-          {/*//     <Route path={path} key={name} exact component={dynamic({app,...component})}/>*/}
-          {/*//   )*/}
-          {/*// })*/}
-          {/*//  function(){*/}
-          {/*//     return <div>{*/}
-          {/*//*/}
-          {/*//     }</div>*/}
-          {/*// }*/}
-          {/*routes.map(({path, name, component}) => {*/}
-            {/*return (*/}
-              {/*<Route path={path} key={name} exact component={component}/>*/}
-            {/*)*/}
-          {/*})*/}
+        {/*// routes.map(({path,name,component})=>{*/}
+        {/*//   return(*/}
+        {/*//     <Route path={path} key={name} exact component={dynamic({app,...component})}/>*/}
+        {/*//   )*/}
+        {/*// })*/}
+        {/*//  function(){*/}
+        {/*//     return <div>{*/}
+        {/*//*/}
+        {/*//     }</div>*/}
+        {/*// }*/}
+        {/*routes.map(({path, name, component}) => {*/}
+        {/*return (*/}
+        {/*<Route path={path} key={name} exact component={component}/>*/}
+        {/*)*/}
+        {/*})*/}
         {/*}*/}
 
-       
+
       </Switch>
     </Router>
   )
 
+}
 
 export {RouterConfig, InspectionRules, RouteGuardIsStart_up}
