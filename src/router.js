@@ -13,7 +13,17 @@ import Plot from './routes/Plot/Plot';
 import Idea from './routes/Idea/Idea';
 import Music from './routes/Music/Music';
 import Search from './routes/seek/Search';
-
+import Discover from './routes/List/Discover';
+import Exist from './routes/List/Exist';
+import Cartoon from './routes/List/Cartoon ';
+import Cold from './routes/List/Cold';
+import Appetizing from './routes/List/Appetizing';
+import Originality from './routes/List/Originality';
+import Exercise from './routes/List/Exercise';
+import Music from './routes/List/Music';
+import Pets from './routes/List/Pets';
+import CnTech from './routes/List/CnTech';
+import Search from './routes/seek/Search';
 import RouteGuard from './routes/RouteGuard'
 
 const InspectionRules = (next, Redirect) => {
@@ -96,6 +106,69 @@ function RouterConfig({history, app}) {
       // component:()=>import('./routes/Music/Music')
       component: Search
     },
+    {
+      path: '/Discover',
+      name: 'Discover',
+      auth: false,
+      // component:()=>import('./routes/Music/Music')
+      component: Discover
+    },
+    {
+      path: '/Exist',
+      name: 'Exist',
+      auth: false,
+      // component:()=>import('./routes/Music/Music')
+      component: Exist
+    },
+    {
+      path: '/Cartoon',
+      name: 'Cartoon',
+      auth: false,
+      // component:()=>import('./routes/Music/Music')
+      component: Cartoon
+    },
+    {
+      path: '/Cold',
+      name: 'Cold',
+      auth: false,
+      // component:()=>import('./routes/Music/Music')
+      component: Cold
+    },
+    {
+      path: '/Appetizing',
+      name: 'Appetizing',
+      auth: false,
+      // component:()=>import('./routes/Music/Music')
+      component: Appetizing
+    },
+    {
+      path: '/Originality',
+      name: 'Originality',
+      auth: false,
+      // component:()=>import('./routes/Music/Music')
+      component: Originality
+    },
+    {
+      path: '/Exercise',
+      name: 'Exercise',
+      auth: false,
+      // component:()=>import('./routes/Music/Music')
+      component: Originality
+    },
+    {
+      path: '/Pets',
+      name: 'Pets',
+      auth: false,
+      // component:()=>import('./routes/Music/Music')
+      component: Pets
+    },
+    {
+      path: '/CnTech',
+      name: 'CnTech',
+      auth: false,
+      // component:()=>import('./routes/Music/Music')
+      component: CnTech
+    },
     ]
   return (
     <Router history={history}>
@@ -121,10 +194,11 @@ function RouterConfig({history, app}) {
             {/*)*/}
           {/*})*/}
         {/*}*/}
+
+       
       </Switch>
     </Router>
   )
-}
 
 
 export {RouterConfig, InspectionRules, RouteGuardIsStart_up}

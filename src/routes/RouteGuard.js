@@ -36,8 +36,6 @@ class RouteGuard extends Component {
 
       /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~暴露接口测试*/
       if (target && !target.auth) {
-        console.log('有值，不需要检验')
-        console.log(target)
         return <Route exact path={isGetRoute ? pathname : target.path} component={target.component}/>
       } else if (target && target.auth) {
         let next = () => {
@@ -46,10 +44,8 @@ class RouteGuard extends Component {
         let Redir = (toTarget) => {
           return <Redirect to={{pathname: toTarget, state: {beforeTo: target.path}}}/>
         }
-        console.log('有值，需要检验')
         return InspectionRules(next, Redir)
       } else {
-        console.log('无值，404')
         return <_404/>
       }
     }

@@ -1,7 +1,8 @@
 import React, {Component} from 'react'
 import styles from './Login.css'
-import {Input,  Button, message} from 'antd';
+import {Input, Button, message} from 'antd';
 import axios from 'axios'
+
 export default class Register extends Component {
   constructor(props) {
     super(props);
@@ -27,34 +28,35 @@ export default class Register extends Component {
   }
 
   async login() {
-      this.setState({
-        loading: true,
-      })
-      let data = await axios({
-        method: 'post',
-        url: 'http://106.14.81.245:3100/loginRegister/login',
-        data: {
-          tel: this.state.tel,
-          password: this.state.password
-        }
-      })
-      this.setState({
-        loading: false
-      })
-      if (data.data.state===1) {
-        message.info(data.data.msg)
-        sessionStorage.setItem("username", this.state.tel)
-        sessionStorage.setItem("name", data.data.username)
-        this.props.history.push({
-          pathname: 'my'
-        })
-      } else{
-        message.info(data.data.msg)
-        // this.props.history.push({
-        //   pathname: "/login",
-        //   state: {fromDashboard: true}
-        // })
+    this.setState({
+      loading: true,
+    })
+    let data = await axios({
+      method: 'post',
+      url: 'http://106.14.81.245:3100/loginRegister/login',
+      data: {
+        tel: this.state.tel,
+        password: this.state.password
       }
+    })
+    console.log(data)
+    this.setState({
+      loading: false
+    })
+    if (data.data.state === 1) {
+      message.info(data.data.msg)
+      sessionStorage.setItem("username", this.state.tel)
+      sessionStorage.setItem("name", data.data.username)
+      this.props.history.push({
+        pathname: 'my'
+      })
+    } else {
+      message.info(data.data.msg)
+      // this.props.history.push({
+      //   pathname: "/login",
+      //   state: {fromDashboard: true}
+      // })
+    }
   }
 
   render() {
@@ -70,17 +72,17 @@ export default class Register extends Component {
                           style={{marginTop: '0.2rem'}}/>
           <div style={{
             marginTop: '0.2rem',
-            display:'flex',
-            justifyContent:'space-around'
+            display: 'flex',
+            justifyContent: 'space-around'
           }}>
-            <Button type="primary" loading={this.state.loading} onClick={this.login.bind(this)} >
+            <Button type="primary" loading={this.state.loading} onClick={this.login.bind(this)}>
               点击登录
             </Button>
-            <Button type="primary"  onClick={()=>{
+            <Button type="primary" onClick={() => {
               this.props.history.push({
-                pathname:'/register'
+                pathname: '/register'
               })
-            }} >
+            }}>
               去注册
             </Button>
           </div>
